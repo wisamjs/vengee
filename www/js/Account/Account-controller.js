@@ -113,10 +113,17 @@ vm.severityOptions = [
   }
 
   function addEnemy() {
-    vm.enemy.rating = vm.ratings.filter(function(rating){
-      return rating;
-    }).length;
 
+    vm.enemy.ratingArray = vm.ratings.filter(function(rating){
+      return rating;
+    });
+    vm.enemy.rating = vm.enemy.ratingArray.length;
+
+    if (vm.maxAnger){
+      vm.enemy.ratingArray.push(6);
+      vm.enemy.rating = 6;
+
+    }
     Enemies.add(vm.enemy);
     $state.go('tab.enemies');
   }
@@ -159,12 +166,12 @@ vm.severityOptions = [
   }
 
   vm.getPhoto = function() {
-      // Camera.getPicture().then(function(imageURI) {
-      //   console.log(imageURI);
-      //   vm.enemy.img = imageURI;
-      // }, function(err) {
-      //   console.err(err);
-      // });
+      Camera.getPicture().then(function(imageURI) {
+        console.log(imageURI);
+        vm.enemy.img = imageURI;
+      }, function(err) {
+        console.err(err);
+      });
   };
 
   vm.getPhoto();

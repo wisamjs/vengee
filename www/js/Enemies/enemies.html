@@ -1,14 +1,24 @@
 <ion-view view-title="Hit List">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="enemy in enemiesController.enemies" type="item-text-wrap" href="#/tab/chats/{{enemy.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="enemy in enemiesController.enemies track by enemy.id" type="item-text-wrap">
         <img ng-src="{{enemy.img}}">
         <h2>{{enemy.name}}</h2>
         <p>{{enemy.description}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
+        <div>
+          <img
+           class="finger-rating"
+           ng-repeat="num in enemy.ratingArray track by $index"
+          ng-class="accountController.ratingSelected(num)"
+          ng-class="{'rating--max-rating': accountController.maxAnger}"
+          ng-click="accountController.selectRating(num)"
+          src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt="">
+        </div>
         <ion-option-button class="button-calm" ng-click="enemiesController.forgive(enemy)">
           Forgive
+        </ion-option-button>
+        <ion-option-button class="button-assertive" ng-click="enemiesController.revenge(enemy)">
+          Revenge
         </ion-option-button>
       </ion-item>
     </ion-list>

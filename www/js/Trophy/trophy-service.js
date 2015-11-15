@@ -27,6 +27,12 @@ angular.module('trophy-service',[])
   return {
     all: function() {
       return trophies;
+    },
+    add: function(person){
+      var prevId = trophies[trophies.length - 1].id;
+      var nextId = prevId + 1;
+      person.id = nextId;
+      trophies.push(person);
     }
   }
 });

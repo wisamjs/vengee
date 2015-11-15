@@ -41,5 +41,13 @@
 .logo{
   width:80%;
   margin-top: 250px;
-  margin-left: 72px;
+  margin-left: 40px;
+}
+
+.home{
+  background-color: #5c37cc;
+}
+
+.finger-rating{
+  width:10%;
 }
