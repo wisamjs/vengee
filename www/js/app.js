@@ -9,7 +9,9 @@ angular.module('starter', [
   'routes',
   'core',
   'Enemies',
+  'Forgiven',
   'Trophy',
+  'landing-page-controller',
   'Chat-Detail','Account','Dash'])
 
 .run(function($ionicPlatform) {

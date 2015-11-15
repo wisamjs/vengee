@@ -1,0 +1,10 @@
+<ion-view view-title="Trophies">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="person in forgivenController.forgiven" type="item-text-wrap" href="#/tab/chats/{{person.id}}">
+        <img ng-src="{{person.img}}">
+        <h2>{{person.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -12,7 +12,15 @@ angular.module('routes', [])
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
+  .state('tab.home', {
+    url: '/home',
+    views: {
+      'tab-home': {
+        templateUrl: 'js/landing-page/landing-page.html',
+        controller: 'LandingPageController as landingPageController'
+      }
+    }
+  })
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -24,6 +32,7 @@ angular.module('routes', [])
       }
     }
   })
+
   .state('tab.enemies', {
       url: '/enemies',
       views: {
@@ -39,6 +48,15 @@ angular.module('routes', [])
         'tab-trophies': {
           templateUrl: 'js/Trophy/trophy.html',
           controller: 'TrophyController as trophyController'
+        }
+      }
+    })
+  .state('tab.forgiven', {
+      url: '/forgiven',
+      views: {
+        'tab-forgiven': {
+          templateUrl: 'js/Forgiven/forgiven.html',
+          controller: 'ForgivenController as forgivenController'
         }
       }
     })
@@ -63,6 +81,6 @@ angular.module('routes', [])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });

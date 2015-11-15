@@ -18,8 +18,9 @@
         ng-model="accountController.enemy.areaOfOffence">
         </select>
       </label>
-      <label class="item item-input item-select">
-        <div class="input-label">Severity of their transgression</div>
+      <div class="item">Severity</div>
+      <label class=" severity item item-input item-select">
+        <div class="input-label">Severity</div>
         <select class="test" ng-options="option as option.label for option in accountController.severityOptions track by option.id"
         ng-model="accountController.enemy.severity"
         ng-change="accountController.setAngerRating()">

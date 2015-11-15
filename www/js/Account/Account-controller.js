@@ -33,7 +33,7 @@ angular.module('Account-Controller',[])
 {id: 3, label: 'Spiritual'},
 {id: 4, label: 'Existential'},
 {id: 5, label: 'Taste'},
-{id: 6, label: 'Something with my precious cat'},
+{id: 6, label: 'Insulted my baby or beloved pet'},
 {id: 7, label: 'All of Humanity'}];
 
 vm.severityOptions = [
@@ -41,7 +41,7 @@ vm.severityOptions = [
 {id: 1, label: 'True blue piece of shit needs a lesson.'},
 {id: 2, label: 'That fucking piece of shit has really got this coming.'},
 {id: 3, label: 'Fuck me? No no no my friend, FUCK YOU, you garbage bag full of wasted organs.'},
-{id: 4, label: 'YOUR SHIT IS UNBELIEVABLE AND I WILL FUCKING PUT YOU IN THE MOTHER FUCKING DIRT'}];
+{id: 4, label: 'I CONJURE A DARK RITUAL TO LIVE FOREVER IN TORMENT TO HAUNT YOUR CHILDREN’S CHILDREN’S CHILDREN'}];
   vm.enemy = {
     where: vm.whereOptions[0],
     areaOfOffence: vm.areaOfOffenceOptions[0],
@@ -113,6 +113,10 @@ vm.severityOptions = [
   }
 
   function addEnemy() {
+    vm.enemy.rating = vm.ratings.filter(function(rating){
+      return rating;
+    }).length;
+
     Enemies.add(vm.enemy);
     $state.go('tab.enemies');
   }

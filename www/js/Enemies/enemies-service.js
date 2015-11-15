@@ -6,26 +6,27 @@ angular.module('Enemies-Service', [])
   var enemies = [{
     id: 0,
     name: 'Abby Ho',
-    description: 'You on your way?',
     img: 'img/abby.jpg',
-    number: '+14167285893' //TODO CHANGE
+    number: '+14167285893', //TODO CHANGE,
+    rating:1
+
   }, {
     id: 1,
     name: 'Mark Little',
-    description: 'Hey, it\'s me',
     img: 'img/mark.jpeg',
+   rating:3
     },
     {
     id: 2,
     name: 'Paloma Nunez',
-    description: 'Hey, it\'s me',
-    img: 'img/paloma.jpg'
+    img: 'img/paloma.jpg',
+   rating:4
     },
   {
     id: 3,
     name: 'Trevor Coleman',
-    description: 'Hey, it\'s me',
-    img: 'img/trevor.jpg'
+    img: 'img/trevor.jpg',
+   rating:5
   }];
 
 
