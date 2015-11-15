@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 45fc010624f8993e640e5e03a4cf6ad8a0b869a9 wzaghal <wisamzaghal@gmail.com> 1447554135 -0500	commit (initial): initial scaffold setup
+45fc010624f8993e640e5e03a4cf6ad8a0b869a9 ad5633c17ed6723bda7ab60aede65cae5fdef7a4 wzaghal <wisamzaghal@gmail.com> 1447555588 -0500	commit: file restructure
+ad5633c17ed6723bda7ab60aede65cae5fdef7a4 955f8dd32aa230d7011d943238047eb46e80b646 wzaghal <wisamzaghal@gmail.com> 1447557402 -0500	commit: create routes file and init revenge service
+955f8dd32aa230d7011d943238047eb46e80b646 1a950d9e4430d6c5c1f5c6354fc33b9ab9bea39d wzaghal <wisamzaghal@gmail.com> 1447558636 -0500	commit: slight changes
+1a950d9e4430d6c5c1f5c6354fc33b9ab9bea39d 45fc010624f8993e640e5e03a4cf6ad8a0b869a9 wzaghal <wisamzaghal@gmail.com> 1447558779 -0500	checkout: moving from master to 45fc010624f8993e640e5e03a4cf6ad8a0b869a9
+45fc010624f8993e640e5e03a4cf6ad8a0b869a9 1a950d9e4430d6c5c1f5c6354fc33b9ab9bea39d wzaghal <wisamzaghal@gmail.com> 1447558892 -0500	checkout: moving from 45fc010624f8993e640e5e03a4cf6ad8a0b869a9 to master
+1a950d9e4430d6c5c1f5c6354fc33b9ab9bea39d 61d82e52133eaf3ebda77f6600d1a7e472c31178 wzaghal <wisamzaghal@gmail.com> 1447560864 -0500	commit: more file cleanup
