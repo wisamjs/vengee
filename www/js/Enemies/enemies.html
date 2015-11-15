@@ -1,0 +1,16 @@
+<ion-view view-title="Hit List">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="enemy in enemiesController.enemies" type="item-text-wrap" href="#/tab/chats/{{enemy.id}}">
+        <img ng-src="{{enemy.img}}">
+        <h2>{{enemy.name}}</h2>
+        <p>{{enemy.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-calm" ng-click="forgive(chat)">
+          Forgive
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

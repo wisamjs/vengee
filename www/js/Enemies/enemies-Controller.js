@@ -1,5 +1,5 @@
-angular.module('Chats-Controller',[])
-.controller('ChatsController', function(Chats) {
+angular.module('Enemies-Controller',[])
+.controller('EnemiesController', function(Enemies) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -8,9 +8,10 @@ angular.module('Chats-Controller',[])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+
   var vm = this;
-  vm.chats = Chats.all();
+  vm.enemies = Enemies.all();
   vm.forgive = function(chat) {
-    Chats.remove(chat);
+    Enemies.remove(chat);
   };
 })

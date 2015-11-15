@@ -24,13 +24,21 @@ angular.module('routes', [])
       }
     }
   })
-
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.enemies', {
+      url: '/enemies',
       views: {
-        'tab-chats': {
-          templateUrl: 'js/Chats/chats.html',
-          controller: 'ChatsController as chatsController'
+        'tab-enemies': {
+          templateUrl: 'js/Enemies/enemies.html',
+          controller: 'EnemiesController as enemiesController'
+        }
+      }
+    })
+  .state('tab.trophies', {
+      url: '/trophies',
+      views: {
+        'tab-trophies': {
+          templateUrl: 'js/Trophy/trophy.html',
+          controller: 'TrophyController as trophyController'
         }
       }
     })
@@ -49,7 +57,7 @@ angular.module('routes', [])
     views: {
       'tab-account': {
         templateUrl: 'js/Account/account.html',
-        controller: 'AccountCtrl'
+        controller: 'AccountController as accountController'
       }
     }
   });

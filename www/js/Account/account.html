@@ -1,4 +1,72 @@
 <ion-view view-title="Account">
   <ion-content>
+    <div class="list">
+      <img class="enemy-img" ng-src="{{accountController.enemy.img}}" alt="">
+      <label class="item item-input">
+        <input type="text" ng-model="accountController.enemy.name" placeholder="Asshole name">
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Where</div>
+        <select ng-options="option as option.label for option in accountController.whereOptions track by option.id"
+        ng-change="accountController.isComedyHackWeekend()"
+        ng-model="accountController.enemy.where">
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Area of Offence</div>
+        <select ng-options="option as option.label for option in accountController.areaOfOffenceOptions track by option.id"
+        ng-model="accountController.enemy.areaOfOffence">
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Severity of their transgression</div>
+        <select class="test" ng-options="option as option.label for option in accountController.severityOptions track by option.id"
+        ng-model="accountController.enemy.severity"
+        ng-change="accountController.setAngerRating()">
+        </select>
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Forgivness warning"></textarea>
+      </label>
+      <label class="item item-input"
+      ng-if="!accountController.maxAnger">
+        <input type="number" placeholder="How mad are you">
+        <img class="rating--unselected"
+  ng-repeat="num in [0,1,2,3,4]"
+  ng-class="accountController.ratingSelected(num)"
+  ng-class="{'rating--max-rating': accountController.maxAnger}"
+  ng-click="accountController.selectRating(num)"
+  src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt="">
+      </label>
+<div class="max-anger" ng-if="accountController.maxAnger">
+        <img class="rating--unselected"
+  ng-repeat="num in [0,1,2,3,4]"
+  ng-class="accountController.ratingSelected(num)"
+  ng-class="{'rating--max-rating': accountController.maxAnger}"
+  ng-click="accountController.selectRating(num)"
+  src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt="">
+        <img class="rating--unselected"
+  ng-repeat="num in [0,1,2,3,4]"
+  ng-class="accountController.ratingSelected(num)"
+  ng-class="{'rating--max-rating': accountController.maxAnger}"
+  ng-click="accountController.selectRating(num)"
+  src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt="">
+        <img class="rating--unselected"
+  ng-repeat="num in [0,1,2,3,4]"
+  ng-class="accountController.ratingSelected(num)"
+  ng-class="{'rating--max-rating': accountController.maxAnger}"
+  ng-click="accountController.selectRating(num)"
+  src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt="">
+          <img class="rating--unselected"
+  ng-repeat="num in [0,1,2]"
+  ng-class="accountController.ratingSelected(num)"
+  ng-class="{'rating--max-rating': accountController.maxAnger}"
+  ng-click="accountController.selectRating(num)"
+  src="https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_400x400.png" alt=""></div>
+          <button ng-click="accountController.addEnemy()" class="button button-block button-positive">
+      Submit
+    </button>
+    </div>
+
   </ion-content>
 </ion-view>

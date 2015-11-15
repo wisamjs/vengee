@@ -7,7 +7,10 @@
 angular.module('starter', [
   'ionic',
   'routes',
-  'Chats','Chat-Detail','Account','Dash'])
+  'core',
+  'Enemies',
+  'Trophy',
+  'Chat-Detail','Account','Dash'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
