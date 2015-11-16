@@ -147,12 +147,11 @@ angular.module('Enemies-Controller',[])
         Trophies.add(vm.currentEnemy);
         return;
       }
-      debugger;
       if (vm.currentDialog < (vm.currentEnemy.rating - 1)){
         vm.currentDialog+=1;
         vm.forgive(vm.currentEnemy, vm.currentDialog);
       }else{
-      vm.currentDialog = 1;
+      vm.currentDialog = 0;
       Enemies.remove(vm.currentEnemy);
       Forgiven.add(vm.currentEnemy);
 
@@ -173,7 +172,7 @@ angular.module('Enemies-Controller',[])
           vm.currentEnemy.ratingArray.push(true);
           vm.currentEnemy.rating += 1;
       }
-              vm.currentDialog = 1;
+              vm.currentDialog = 0;
 
      }
    });
