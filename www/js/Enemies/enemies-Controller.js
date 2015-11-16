@@ -155,16 +155,18 @@ angular.module('Enemies-Controller',[])
       Enemies.remove(vm.currentEnemy);
       Forgiven.add(vm.currentEnemy);
 
-        return $http({
-          url: 'http://revenge-forgive.herokuapp.com/forgive',
-          method: 'POST',
-          data:{
-            number: vm.currentEnemy.number
-          }
-        })
-        .then(function(res){
-          console.log(res);
-        });
+      if (vm.currentEnemy.number){
+          return $http({
+            url: 'http://revenge-forgive.herokuapp.com/forgive',
+            method: 'POST',
+            data:{
+              number: vm.currentEnemy.number
+            }
+          })
+          .then(function(res){
+            console.log(res);
+          });
+        }
       }
 
      } else {

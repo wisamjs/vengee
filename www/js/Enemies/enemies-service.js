@@ -7,7 +7,6 @@ angular.module('Enemies-Service', [])
     id: 0,
     name: 'Abby Ho',
     img: 'img/abby.jpg',
-    number: '+14167285893', //TODO CHANGE,
     rating:2,
     ratingArray: [1,2]
 
