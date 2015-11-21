@@ -12,7 +12,7 @@ angular.module('starter', [
   'Forgiven',
   'Trophy',
   'landing-page-controller',
-  'Chat-Detail','Account','Dash'])
+  'Chat-Detail','List-Logger','Dash'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

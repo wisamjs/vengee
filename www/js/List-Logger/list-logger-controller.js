@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('Account-Controller',[])
-.controller('AccountController', function(Camera, Enemies, $state) {
+angular.module('List-Logger-Controller',[])
+.controller('ListLoggerController', function(Camera, Enemies, $state, $window) {
   var vm = this;
   angular.extend(vm,{
     selectRating: selectRating,
@@ -42,12 +42,20 @@ vm.severityOptions = [
 {id: 2, label: 'That fucking piece of shit has really got this coming.'},
 {id: 3, label: 'Fuck me? No no no my friend, FUCK YOU, you garbage bag full of wasted organs.'},
 {id: 4, label: 'I CONJURE A DARK RITUAL TO LIVE FOREVER IN TORMENT TO HAUNT YOUR CHILDREN’S CHILDREN’S CHILDREN'}];
-  vm.enemy = {
+
+function setup(){
+  initEnemy();
+  vm.getPhoto();
+}
+
+function initEnemy(){
+    vm.enemy = {
     where: vm.whereOptions[0],
     areaOfOffence: vm.areaOfOffenceOptions[0],
     severity: vm.severityOptions[0]
   };
   selectRating(0);
+}
 
   function isComedyHackWeekend() {
     if (vm.enemy.where.id === 10) {
@@ -166,13 +174,19 @@ vm.severityOptions = [
   }
 
   vm.getPhoto = function() {
+    if ($window.cordova) {
       Camera.getPicture().then(function(imageURI) {
         console.log(imageURI);
         vm.enemy.img = imageURI;
       }, function(err) {
         console.err(err);
       });
+    }else {
+      vm.isWeb = true;
+
+    }
   };
 
-  vm.getPhoto();
+  setup();
+
 });

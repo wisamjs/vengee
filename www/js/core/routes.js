@@ -70,12 +70,13 @@ angular.module('routes', [])
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.logger', {
+    cache: false,
+    url: '/logger',
     views: {
-      'tab-account': {
-        templateUrl: 'js/Account/account.html',
-        controller: 'AccountController as accountController'
+      'tab-logger': {
+        templateUrl: 'js/List-Logger/list-logger.html',
+        controller: 'ListLoggerController as listLoggerController'
       }
     }
   });
